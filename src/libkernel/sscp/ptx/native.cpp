@@ -37,7 +37,7 @@ HIPSYCL_SSCP_BUILTIN float __acpp_sscp_native_rsqrt_f32(float x) { return __acpp
 
 HIPSYCL_SSCP_BUILTIN float __acpp_sscp_native_sin_f32(float x) { return __nv_fast_sinf(x); }
 
-HIPSYCL_SSCP_BUILTIN void __acpp_sscp_native_sincos_f32(float x, float* sptr, float* cptr) { __nv_fast_sincosf(x, sptr, cptr); }
+HIPSYCL_SSCP_BUILTIN float __acpp_sscp_native_sincos_f32(float x, float* cosval) { float sinval; __nv_fast_sincosf(x, &sinval, cosval);  return sinval;}
 
 HIPSYCL_SSCP_BUILTIN float __acpp_sscp_native_sqrt_f32(float x) { return __nvvm_sqrt_rn_f(x); }
 
