@@ -277,6 +277,8 @@ HIPSYCL_DEFINE_HIPLIKE_NATIVE_MATH_BUILTIN(__acpp_native_rsqrt, __frsqrt_rn,
                                            __acpp_rsqrt)
 HIPSYCL_DEFINE_HIPLIKE_NATIVE_MATH_BUILTIN(__acpp_native_sin, __sinf,
                                            __acpp_sin)
+HIPSYCL_DEFINE_HIPLIKE_NATIVE_MATH_BUILTIN(__acpp_native_sincos, __sincosf,
+                                           __acpp_sincos)
 
 template<class T>
 HIPSYCL_HIPLIKE_BUILTIN T __acpp_native_sqrt(T x) noexcept {
